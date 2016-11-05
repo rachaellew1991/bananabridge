@@ -118,4 +118,5 @@ Interaction design and information architecture
 ## Skeleton
 Interface, navigation, information design
 (You'll provide wireframes here)
-please see the pictures in file "img"
+![skeleton1](https://github.com/rachaellew1991/bananabridge/blob/master/img/skeleton1.jpg?raw=true)
+![skeleton2](https://github.com/rachaellew1991/bananabridge/blob/master/img/skeleton2.jpg?raw=true)
