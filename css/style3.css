@@ -1,0 +1,118 @@
+body {
+  background-color: #fbd28b;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Open Sans",sans-serif;
+}
+
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: #F05F40;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .navbar-default .navbar-header .navbar-brand {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .navbar-default .navbar-header .navbar-brand:hover,
+  .navbar-default .navbar-header .navbar-brand:focus {
+    color: white;
+  }
+  .navbar-default .nav > li > a,
+  .navbar-default .nav > li > a:focus {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .navbar-default .nav > li > a:hover,
+  .navbar-default .nav > li > a:focus:hover {
+    color: white;
+  }
+
+.admin-panel {
+  width: 100%;
+  max-width:900px;
+  margin: 50px auto;
+  overflow: hidden;
+  background-color:#fff;
+  position:relative;
+}
+
+.slidebar-1 {
+  width:100%;
+  float: left;
+  background-color: #F05F40;
+}
+.slidebar {
+  width:15%;
+  float: left;
+  background-color: #F05F40;
+}
+.slidebar ul {
+  position:relative;
+  height:100%;
+}
+
+.slidebar a{
+  color: #bbb;
+  text-decoration:none;
+}
+.slidebar li{
+  text-align:center;
+  padding: 0x 0px;
+}
+
+ul {
+  padding: 0;
+  margin:0;
+}
+li {
+  list-style-type: none;
+  margin: 0;
+  position: relative;
+  text-align:center;
+  color:#fff
+}
+.slidebar i {
+  display:block;
+  text-align:center;
+  color:#fff;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.slidebar ul a {
+  color:#fff;
+  text-decoration: none;
+  box-sizing:border-box;
+  display: block;
+  text-transform: capitalize;
+  padding: 20px;
+}
+.slidebar li:hover a, li#active{
+  background-color: #313131;
+}
+.slidebar li:hover i, li#active i{
+  color: #17BCE8;
+}
+.slidebar li:focus i {
+  color: #17BCE8;
+}
+
+.main {
+  float: left;
+  width: 85%;
+  height: 90%
+  background-color: rgb(255,255,255);
+  position: relative;
+  overflow-y: scroll;
+}
+
+.main h2 {
+  margin:1em 30px;
+  color:#17BCE8;
+  font-size: 20px;
+  font-weight:600;
+  border-bottom: 1px solid #bbb;
+  padding: 0px 0px 20px 0px;
+}
+
+

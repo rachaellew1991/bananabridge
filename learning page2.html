@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Banana Bridge</title>
+
+ 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style3.css" rel="stylesheet">
+   
+
+   
+</head>
+<nav id="mainNav" class="navbar navbar-default np">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                 
+                <a class="navbar-brand" href="#page-top">
+                  <img alt="Brand" src="img/logo.png">
+                </a>
+            </div>
+
+           
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">My Home</a>
+                    </li>
+                    <li>
+                        <a href="#">My Stories</a>
+                    </li>
+                    <li>
+                        <a href="#">My Friends</a>
+                    </li>
+                    <li>
+                        <a href="#">My Family</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<body>
+<div class="container">
+ 
+<div class="admin-panel">
+  
+    <div class="slidebar">
+        <ul>
+            <li><a href="" name="tab1"><i class="fa fa-tachometer"></i>Reading</a></li>
+            <li><a href="" name="tab2"><i class="fa fa-eyedropper"></i>Lisening</a></li>
+            <li><a href="" name="tab3"><i class="fa fa-pencil"></i>Writing</a></li>
+            <li><a href="" name="tab4"><i class="fa fa-picture-o"></i>Speaking</a></li>
+            <li><a href="" name="tab5"><i class="fa fa-file-video-o"></i>Have Fun</a></li>
+            <li><a href="" name="tab6"><i class="fa fa-wrench"></i>Ask questions</a></li>
+        </ul>
+    </div>
+  
+    <div class="main" style=" height: 100%; overflow: scroll; ">
+         <div id="tab1"><h2 class="header">Reading</h2> 
+         <center>
+         <h4>The Old Witch by The Brothers Grimm </h4>
+         </center>
+
+            <p>There was once a little girl who was very wilful and who never obeyed when her elders spoke to her - so how could she be happy?  The Old Witch Brothers Grimm</p>
+
+            <p>One day she said to her parents, 'I have heard so much of the old witch that I will go and see her. People say she is a wonderful old woman, and has many marvellous things in her house, and I am very curious to see them.'</p>
+
+            <p>But her parents forbade her going, saying, 'The witch is a wicked old woman, who performs many godless deeds - and if you go near her, you are no longer a child of ours.'</p>
+
+            <p>The girl, however, would not turn back at her parents' command, but went to the witch's house. When she arrived there the old woman asked her:</p>
+            <p>'Why are you so pale?' </p>
+            <p>'Ah,' she replied, trembling all over, 'I have frightened myself so with what I have just seen.'</p>
+
+         </div>
+
+
+         <div id="tab2"><h2 class="header">Lisening</h2>
+
+         <center><iframe width="560" height="315" src="https://www.youtube.com/embed/_pTWLr2r90o" frameborder="0" allowfullscreen></iframe></center>
+
+
+         </div>
+
+
+
+         <div id="tab3"><h2 class="header">Writing</h2>
+
+                 <center>
+                 <h4>What would you be for Halloween? Discrib how you will celebrate Halloween. </h4>
+                  <textarea rows="8" cols="100" name="comment" form="usrform"> Enter text here...</textarea>
+                  <button type="button" class="btn btn-danger">Submit</button>
+                  <button type="button" class="btn btn-danger">Share</button>
+
+                </center>
+                 
+        </div>
+
+
+
+         <div id="tab4"><h2 class="header">Speaking</h2>
+         
+         </div>
+    
+
+
+         <div id="tab5"><h2 class="header">Have Fun</h2>
+
+            <center>
+            <h4>Let's cook some Halloween Yummy with Friends! </h4>
+            
+            <h4>和小伙伴们一起做美食！</h4>
+             <a href="#" >
+                  <img src="img/finger.jpg" alt="...">
+              </a>
+
+            &nbsp;&nbsp; &nbsp;&nbsp; 
+
+              <a href="#" >
+                  <img src="img/punch.jpg" alt="...">
+              </a>
+            </center>
+
+         </div>
+
+
+
+
+         <div id="tab6"><h2 class="header">Ask questions</h2></div>    
+    </div>
+    
+  
+</div>
+
+<center>
+<a href="flashcard.html">
+<button type="button" class="btn btn-info btn-lg">Flip card</button>
+</a>
+</center>
+<br>
+</div>
+
+</body>
+
+
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+  $(".main div").hide(); 
+  // Cache tout les textes et les sous-menu
+
+  $(".slidebar li:first").attr("id","active"); 
+  // Ajoute la class active au premier menu
+ 
+  $(".main div:first").fadeIn(); 
+  // Montre le premier texte à l'apparition de la page
+  
+
+  $('.slidebar a').click(function(e) {
+      e.preventDefault();
+     if ($(this).closest("li").attr("id") == "active"){ 
+          //si le menu cliquer est déjà ouvert.
+       return       
+     }else{             
+       $(".main div").hide(); 
+          // Cache tous les éléments
+
+        $(".slidebar li").attr("id","");  
+          // Rénitialise tout les menu active
+   
+        $(this).parent().attr("id","active"); 
+          // active le parent du li selectionner
+             
+        $('#' + $(this).attr('name')).fadeIn(); 
+          // Montre le texte
+        }
+     
+    
+  });
+
+});
+</script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+

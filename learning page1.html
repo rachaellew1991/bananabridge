@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Banana Bridge</title>
+
+ 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+   
+
+   
+</head>
+
+
+<body>
+<nav id="mainNav" class="navbar navbar-default np">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                 
+                <a class="navbar-brand" href="#page-top">
+                  <img alt="Brand" src="img/logo.png">
+                </a>
+            </div>
+
+           
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">My Home</a>
+                    </li>
+                    <li>
+                        <a href="#">My Stories</a>
+                    </li>
+                    <li>
+                        <a href="#">My Friends</a>
+                    </li>
+                    <li>
+                        <a href="#">My Family</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+<div class="container">
+
+  
+    
+    <ul>
+    
+    <button type="button" class="btn navbar-default btn-lg btn-block"><li ><a href="learning page2.html" style="color: white;">Basic 基本用语</a></li></button>
+  
+
+    <button type="button" class="btn navbar-default btn-lg btn-block"><li style="color: white;">Animals 动物</li></button>
+    <button type="button" class="btn navbar-default btn-lg btn-block"><li style="color: white;">Food 食物</li></button>
+    <button type="button" class="btn navbar-default btn-lg btn-block"><li style="color: white;">Numbers 数字</li></button>
+    <button type="button" class="btn navbar-default btn-lg btn-block"><li style="color: white;">colors 颜色</li></button>
+    <button type="button" class="btn navbar-default btn-lg btn-block"><li style="color: white;">Questions 问题</li></button>
+    <button type="button" class="btn navbar-default btn-lg btn-block"><li style="color: white;">Time and date 时间和日期</li></button>
+    <br>
+    <center><button type="button" class="btn btn-default btn-lg"><li><a href="index.html" >Go back 返回</a></li></button></center>
+
+    </ul>
+
+    </div>
+  
+    
+  
+ 
+</div>
+</div>
+</body>
+
+
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+  $(".main div").hide(); 
+  // Cache tout les textes et les sous-menu
+
+  $(".slidebar li:first").attr("id","active"); 
+  // Ajoute la class active au premier menu
+ 
+  $(".main div:first").fadeIn(); 
+  // Montre le premier texte à l'apparition de la page
+  
+
+  $('.slidebar a').click(function(e) {
+      e.preventDefault();
+     if ($(this).closest("li").attr("id") == "active"){ 
+          //si le menu cliquer est déjà ouvert.
+       return       
+     }else{             
+       $(".main div").hide(); 
+          // Cache tous les éléments
+
+        $(".slidebar li").attr("id","");  
+          // Rénitialise tout les menu active
+   
+        $(this).parent().attr("id","active"); 
+          // active le parent du li selectionner
+             
+        $('#' + $(this).attr('name')).fadeIn(); 
+          // Montre le texte
+        }
+     
+    
+  });
+
+});
+</script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
