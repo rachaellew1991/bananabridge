@@ -112,7 +112,9 @@ Functional and Content Specifications
 
 ## Structure
 Interaction design and information architecture
+please see the pictures in file "img"
 
 ## Skeleton
 Interface, navigation, information design
 (You'll provide wireframes here)
+please see the pictures in file "img"
