@@ -1,10 +1,14 @@
-# boat_project
- Editing
- changes
- more changes
+# Banana Bridge
+ navigate guidance:
+ 1. home page --> "find out more" button --> halloween learning page --> scroll down --> halloween jokes--> click the third panel see explination of third joke --> scroll down --> click pic "now it's time to have fun" --> learning page --> go through reading-->read a halloween story --->listening --> click to see a vocabulary song --->writing -->write something in tex area --> have fun ---> see halloween cooking recipes ---> click flashcard --> flashcard page ---> click card to see it flip.
+ 
+ 2.home page -->scroll down to "English and more" ---> click storyland picture --> storyland page --> see all the book sample -->click first book --> flip book page --> click <<< or >>> to next/previous page.
  
 
-# MSTU 5003 Design Document (Template)
+3.home page --> scroll down to grade level ---> click first grade ---> learning topic page -->click "basic" button --->learning page.
+ 
+
+# MSTU 5003 Design Document (Ruichen Liu)
 
 > Clone the template and upload to your our Github.
 
