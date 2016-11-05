@@ -112,7 +112,8 @@ Functional and Content Specifications
 
 ## Structure
 Interaction design and information architecture
-please see the pictures in file "img"
+![information architecuture](https://github.com/rachaellew1991/bananabridge/blob/master/img/information%20architecture.jpg?raw=true)
+
 
 ## Skeleton
 Interface, navigation, information design
