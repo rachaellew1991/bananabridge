@@ -88,6 +88,28 @@ User experience evaluation: click through data, survey, Questions page.
 ## Scope
 Functional and Content Specifications
 
+*Functional and Content Specifications*
+
+- nagation bar: guide learner to find the content they want.
+
+- hover button: make web experience more fun and interactive
+
+- pharagraph. imagines, videos: content to help user learn to improve reading, listerning skills
+
+- scrollable: make sure vairous content can be in the same page where user will scroll down to focus on different content.
+
+- left scroll effect: attarct user attention on storyland, foodland, and gameland
+
+- collapes panel: to explain halloween joke
+
+- panel group: to create a learning setting where reading, listerning, writing, speaking practice are all available for use to choose.
+
+- input text area: user will practice writing skills followed by tasks
+
+- flip book: user could read story book page by page.
+
+- flip card: help user to remember both English and chinese meaning when flip a card. 
+
 ## Structure
 Interaction design and information architecture
 
