@@ -124,3 +124,7 @@ Interface, navigation, information design
 (You'll provide wireframes here)
 ![skeleton1](https://github.com/rachaellew1991/bananabridge/blob/master/img/skeleton1.jpg?raw=true)
 ![skeleton2](https://github.com/rachaellew1991/bananabridge/blob/master/img/skeleton2.jpg?raw=true)
+
+## Mockup
+![landingpage1]
+
