@@ -126,5 +126,6 @@ Interface, navigation, information design
 ![skeleton2](https://github.com/rachaellew1991/bananabridge/blob/master/img/skeleton2.jpg?raw=true)
 
 ## Mockup
-![landingpage1](https://github.com/rachaellew1991/bananabridge/blob/master/img/skeleton1.jpg?raw=true)
-
+![landingpage1](https://github.com/rachaellew1991/bananabridge/blob/master/img/banana%20bridge%20landingpage.jpg?raw=true)
+![landingpage2](https://github.com/rachaellew1991/bananabridge/blob/master/img/banana%20bridge%20landingpage2.jpg?raw=true)
+![landingpage3](https://github.com/rachaellew1991/bananabridge/blob/master/img/banana%20bridge%20landingpage3.jpg?raw=true)
