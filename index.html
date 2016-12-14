@@ -11,7 +11,7 @@
 
     <title>Banana Bridge</title>
 
- 
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -22,13 +22,13 @@
     <nav id="mainNav" class="navbar navbar-default np">
         <div class="container-fluid">
             <div class="navbar-header">
-                 
+
                 <a class="navbar-brand" href="#page-top">
                   <img alt="Brand" src="img/logo.png">
                 </a>
             </div>
 
-           
+
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -63,7 +63,7 @@
         </div>
     </header>
 
-    
+
     <!--scroll over -->
     <div class="learn-online">
     <div class="g-maintit" id="learn-online-tit">
@@ -72,7 +72,7 @@
 </div>
     <div class="container">
         <div class="row">
-          
+
            <div class="col-md-4">
                <div class="i-msg">
                 <div class="animation-element slide-left">
@@ -85,11 +85,11 @@
                    <h3>Story Land</h3>
                    <p>写故事，读故事，分享话题</p>
                    <p>
-                    
-               
+
+
      </div>
               </div>
-        
+
            <div class="col-md-4">
                <div class="i-msg">
                  <div class="animation-element slide-left">
@@ -101,11 +101,11 @@
              </div>
                    <h3>Food Land</h3>
                    <p>一切好吃的都在这里，和家人朋友一起动手</p>
-                   
-               
+
+
            </div>
          </div>
-         
+
            <div class="col-md-4">
                <div class="i-msg">
                 <div class="animation-element slide-left">
@@ -117,7 +117,7 @@
              </div>
                    <h3>Game Video</h3>
                    <p>小游戏都在这里！</p>
-                   
+
            </div>
        </div>
      </div>
@@ -139,9 +139,9 @@
        <div class="col-md-3 col-sm-6">
            <div class="i-icobox">
                <a href="learning page1.html"><em class="i-ico i-ico1"> </em></a>
-              
+
                <h3>First Grade <br> 一年级</h3>
-               
+
            </div>
        </div>
 
@@ -149,7 +149,7 @@
            <div class="i-icobox">
                <a href="#"><em class="i-ico i-ico2"></em></a>
                <h3>Second Grade <br>二年级</h3>
-               
+
            </div>
        </div>
 
@@ -157,7 +157,7 @@
            <div class="i-icobox">
                <a href="#"><em class="i-ico i-ico3"></em></a>
                <h3>Third Grade <br>三年级</h3>
-              
+
            </div>
        </div>
 
@@ -165,7 +165,7 @@
            <div class="i-icobox">
                <a href="#"><em class="i-ico i-ico4"></em></a>
                <h3>Forth Grade <br>四年级</h3>
-               
+
            </div>
        </div>
    </div>
@@ -176,9 +176,9 @@
        <div class="col-md-3 col-sm-6">
            <div class="i-icobox">
                <a href="#"><em class="i-ico i-ico1"> </em></a>
-              
+
                <h3>Fifth Grade <br>五年级</h3>
-               
+
            </div>
        </div>
 
@@ -186,7 +186,7 @@
            <div class="i-icobox">
                <a href="#"><em class="i-ico i-ico2"></em></a>
                <h3>Sixth Grade <br>六年级</h3>
-               
+
            </div>
        </div>
 
@@ -194,7 +194,7 @@
            <div class="i-icobox">
                <a href="#"><em class="i-ico i-ico3"></em></a>
                <h3>Sing a song <br>学唱歌</h3>
-              
+
            </div>
        </div>
 
@@ -202,7 +202,7 @@
            <div class="i-icobox">
                <a href="#"><em class="i-ico i-ico4"></em></a>
                <h3>culture and history <br>学文化历史</h3>
-               
+
            </div>
        </div>
    </div>
@@ -215,7 +215,7 @@
 <!-- circles end-->
 
 
-    
+
     </section>
 
 
@@ -240,8 +240,10 @@
         </div>
     </section>
 
-    
+
 <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -254,25 +256,21 @@
   firebase.initializeApp(config);
 </script>
 
- <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-
-    <script> $(document).ready(function() {
+<script script type="text/javascript"> $(document).ready(function() {
 var $animation_elements = $('.animation-element');
 var $window = $(window);
 
-function check_if_in_view() {
+function check_if_in_view(); {
   var window_height = $window.height();
   var window_top_position = $window.scrollTop();
   var window_bottom_position = (window_top_position + window_height);
- 
+
   $.each($animation_elements, function() {
     var $element = $(this);
     var element_height = $element.outerHeight();
     var element_top_position = $element.offset().top;
     var element_bottom_position = (element_top_position + element_height);
- 
+
     //check to see if this current container is within viewport
     if ((element_bottom_position >= window_top_position) &&
         (element_top_position <= window_bottom_position)) {
@@ -286,9 +284,8 @@ function check_if_in_view() {
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
         });
-       </script>
 
-
+</script>
 
 </body>
 
