@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
     <meta charset="utf-8">
@@ -11,10 +10,9 @@
 
     <title>Banana Bridge</title>
 
- 
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style2.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -28,7 +26,7 @@
                 <a class="navbar-brand" href="#page-top">Banana Bridge</a>
             </div>
 
-           
+
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -58,80 +56,49 @@
 
 <!--card 1 -->
 
-        
-
-            <div id="card" class="card" style="perspective: 1880px; position: absolute; transform-style: preserve-3d;"> 
+            <div id="card" class="card" style="perspective: 1880px; position: absolute; transform-style: preserve-3d;">
 
                  <div class="col-md-6">
-                        <div class="front alert alert-info"> 
+                        <div class="front alert alert-info">
                         <strong style="backface-visibility: hidden;">Front<br style="backface-visibility: hidden;"></strong>
                         Click to flip me!
-                        </div> 
+                        </div>
 
 
                       <div class="back well well-lg">
                         <strong style="backface-visibility: hidden;">Back<br style="backface-visibility: hidden;"></strong>
                         Click to flip me back!
-                      </div> 
+                      </div>
                 </div>
+              </div>
+<!--card 2 -->
 
+              <div id="card2" class="card" style="perspective: 1880px; position: absolute; transform-style: preserve-3d;">
 
                 <div class="col-md-6">
-                        <div class="front alert alert-info"> 
+                        <div class="front alert alert-info">
                         <strong style="backface-visibility: hidden;">Front<br style="backface-visibility: hidden;"></strong>
                         Click to flip me!
-                        </div> 
-
+                        </div>
 
                       <div class="back well well-lg">
                         <strong style="backface-visibility: hidden;">Back<br style="backface-visibility: hidden;"></strong>
                         Click to flip me back!
-                      </div> 
+                      </div>
                 </div>
-
-             </div>
+              </div>
         </div>
-
-
-
-
-
-
-
-        
-
-
-
-        
-
-
-
-
-
-
-
-
-        
-
-    </div>
-   
-
-</div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <script src="js/jquery.flip.min.js"></script>
-
-    <script>
-    $("#card").flip();
-    </script>
-
-
-
-    <!-- Bootstrap Core JavaScript -->
+           <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
 
-
-
+    <script>
+    $("#card").flip();
+    $("#card2").flip();
+    </script>
 </body>
+</html>
