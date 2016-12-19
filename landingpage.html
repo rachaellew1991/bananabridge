@@ -31,43 +31,86 @@
   </div>
 <!-- /.login/sign up -->
 
-
-
-<div class="materialContainer">
-		<div class="box">
-
-		      <div class="title">LOGIN</div>
-
-		      <div class="input">
-		         <label for="name">Username</label>
-		         <input type="text" name="name" id="name">
-		         <span class="spin"></span>
-		      </div>
-
-		      <div class="input">
-		         <label for="pass">Password</label>
-		         <input type="password" name="pass" id="pass">
-		         <span class="spin"></span>
-		      </div>
-
-		      <div class="button login">
-		         <button><span>login</span> <i class="fa fa-check"></i></button>
-
-		      </div>
-          <div class="button signup">
-             <button><span>sign up</span> <i class="fa fa-check"></i></button>
-    
+<div class="loginform">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up for Free</h1>
+          
+          <form action="/" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
           </div>
 
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="loginbutton button-block"/>Get Started</button>
+          
+          </form>
 
-		      <a href="" class="pass-forgot">Forgot your password?</a>
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="/" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button class="button loginbutton-block"/>Log In</button>
+          
+          </form>
 
-		   </div>
-</div>
-		   
-		      </div>
-		      </div>
-       </div>
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+
 
 
 
@@ -82,245 +125,48 @@
 
 
 
+$('.loginform').find('input, textarea').on('keyup blur focus', function (e) {
+  
+  var $this = $(this),
+      label = $this.prev('label');
 
-
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCWfSKQ3PMBYKKfZhENourhcMvJKIs9iiU",
-    authDomain: "bananabridge-de22d.firebaseapp.com",
-    databaseURL: "https://bananabridge-de22d.firebaseio.com",
-    storageBucket: "bananabridge-de22d.appspot.com",
-    messagingSenderId: "941481343749"
-  };
-  firebase.initializeApp(config);
-
-
-  function toggleSignIn() {
-    if (firebase.auth().currentUser) {
-      // [START signout]
-      firebase.auth().signOut();
-      // [END signout]
-    } else {
-      var email = document.getElementById('email').value;
-      var password = document.getElementById('password').value;
-      if (email.length < 4) {
-        alert('Please enter an email address.');
-        return;
-      }
-      if (password.length < 4) {
-        alert('Please enter a password.');
-        return;
-      }
-      // Sign in with email and pass.
-      // [START authwithemail]
-      firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
-        if (errorCode === 'auth/wrong-password') {
-          alert('Wrong password.');
+    if (e.type === 'keyup') {
+      if ($this.val() === '') {
+          label.removeClass('active highlight');
         } else {
-          alert(errorMessage);
+          label.addClass('active highlight');
         }
-        console.log(error);
-        document.getElementById('quickstart-sign-in').disabled = false;
-        // [END_EXCLUDE]
-      });
-      // [END authwithemail]
-    }
-    document.getElementById('quickstart-sign-in').disabled = true;
-  }
-
-    /**
-     * Handles the sign up button press.
-     */
-    function handleSignUp() {
-      var email = document.getElementById('email').value;
-      var password = document.getElementById('password').value;
-      if (email.length < 4) {
-        alert('Please enter an email address.');
-        return;
+    } else if (e.type === 'blur') {
+      if( $this.val() === '' ) {
+        label.removeClass('active highlight'); 
+      } else {
+        label.removeClass('highlight');   
+      }   
+    } else if (e.type === 'focus') {
+      
+      if( $this.val() === '' ) {
+        label.removeClass('highlight'); 
+      } 
+      else if( $this.val() !== '' ) {
+        label.addClass('highlight');
       }
-      if (password.length < 4) {
-        alert('Please enter a password.');
-        return;
-      }
-      // Sign in with email and pass.
-      // [START createwithemail]
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
-        if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
-        // [END_EXCLUDE]
-      });
-      // [END createwithemail]
     }
 
+});
 
-$(function() {
+$('.tab a').on('click', function (e) {
+  
+  e.preventDefault();
+  
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+  
+  target = $(this).attr('href');
 
-   $(".input input").focus(function() {
-
-      $(this).parent(".input").each(function() {
-         $("label", this).css({
-            "line-height": "18px",
-            "font-size": "18px",
-            "font-weight": "100",
-            "top": "0px"
-         })
-         $(".spin", this).css({
-            "width": "100%"
-         })
-      });
-   }).blur(function() {
-      $(".spin").css({
-         "width": "0px"
-      })
-      if ($(this).val() == "") {
-         $(this).parent(".input").each(function() {
-            $("label", this).css({
-               "line-height": "60px",
-               "font-size": "24px",
-               "font-weight": "300",
-               "top": "10px"
-            })
-         });
-
-      }
-   });
-
-   $(".button").click(function(e) {
-      var pX = e.pageX,
-         pY = e.pageY,
-         oX = parseInt($(this).offset().left),
-         oY = parseInt($(this).offset().top);
-
-      $(this).append('<span class="click-efect x-' + oX + ' y-' + oY + '" style="margin-left:' + (pX - oX) + 'px;margin-top:' + (pY - oY) + 'px;"></span>')
-      $('.x-' + oX + '.y-' + oY + '').animate({
-         "width": "500px",
-         "height": "500px",
-         "top": "-250px",
-         "left": "-250px",
-
-      }, 600);
-      $("button", this).addClass('active');
-
-
-      var email = $('input#name').val();
-
-      //console.log(email);
-
-
-      var password = $('input#pass').val();
-
-      //console.log(password);
-
-      if (email.length < 4) {
-        alert('Please enter an email address.');
-        return;
-      }
-      if (password.length < 4) {
-        alert('Please enter a password.');
-        return;
-      }
-      // Sign in with email and pass.
-      // [START createwithemail]
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
-        if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
-        // [END_EXCLUDE]
-      });
-
-
-
-
-   })
-
-   $(".alt-2").click(function() {
-      if (!$(this).hasClass('material-button')) {
-         $(".shape").css({
-            "width": "100%",
-            "height": "100%",
-            "transform": "rotate(0deg)"
-         })
-
-         setTimeout(function() {
-            $(".overbox").css({
-               "overflow": "initial"
-            })
-         }, 600)
-
-         $(this).animate({
-            "width": "140px",
-            "height": "140px"
-         }, 500, function() {
-            $(".box").removeClass("back");
-
-            $(this).removeClass('active')
-         });
-
-         $(".overbox .title").fadeOut(300);
-         $(".overbox .input").fadeOut(300);
-         $(".overbox .button").fadeOut(300);
-
-         $(".alt-2").addClass('material-buton');
-      }
-
-   })
-
-   $(".material-button").click(function() {
-    
-      if ($(this).hasClass('material-button')) {
-         setTimeout(function() {
-            $(".overbox").css({
-               "overflow": "hidden"
-            })
-            $(".box").addClass("back");
-         }, 200)
-         $(this).addClass('active').animate({
-            "width": "700px",
-            "height": "700px"
-         });
-
-         setTimeout(function() {
-            $(".shape").css({
-               "width": "50%",
-               "height": "50%",
-               "transform": "rotate(45deg)"
-            })
-
-            $(".overbox .title").fadeIn(300);
-            $(".overbox .input").fadeIn(300);
-            $(".overbox .button").fadeIn(300);
-         }, 700)
-
-         $(this).removeClass('material-button');
-
-      }
-
-      if ($(".alt-2").hasClass('material-buton')) {
-         $(".alt-2").removeClass('material-buton');
-         $(".alt-2").addClass('material-button');
-      }
-
-   });
-
+  $('.tab-content > div').not(target).hide();
+  
+  $(target).fadeIn(600);
+  
 });
 	 
 </script>
