@@ -24,7 +24,8 @@
 <body>
 
 <section class="section">
-	<h1>So you think you can create an ID?</h1>
+	<h1>为了让我们更加理解你的需求</h1>
+	<center><h3>Create your profile so that we could know you better!</h3></center>
 
 	<div class="form-progress">
 		<progress class="form-progress-bar" min="0" max="100" value="0" step="33" aria-labelledby="form-progress-completion"></progress>
@@ -42,28 +43,28 @@
 		<!-- Step one -->
 		<div class="form-step js-form-step" data-step="1">
 
-			<p class="form-instructions"><strong>Click the continue button to show form progression.</strong><br>
-				Please fill out the fields below so we can learn some information about you. We promise to store these on Post-It<sup><small>TM</small></sup> notes around the office.</p>
+			<p class="form-instructions"><strong></strong><br>
+				Please fill out the fields below so we can learn some information about you.</p>
 
 			<form action="" name="form-step-1">
 				<div class="fieldgroup">
 					<input type="text" name="firstName" id="firstName" />
-					<label for="firstName">First name</label>
+					<label for="姓名">Your Name </label>
 				</div>
 
 				<div class="fieldgroup">
 					<input type="text" name="lastName" id="lastName" />
-					<label for="lastName">Last name</label>
+					<label for="年龄">Age</label>
 				</div>
 
 				<div class="fieldgroup">
 					<input type="text" name="email" id="email" />
-					<label for="email">Email</label>
+					<label for="性别">Gender</label>
 				</div>
 
 				<div class="fieldgroup">
 					<input type="text" name="postalCode" id="postalCode" />
-					<label for="postalCode">Postal code</label>
+					<label for="家乡">Home Town</label>
 				</div>
 
 				<div class="buttons">
@@ -83,6 +84,15 @@
 
 				<form action="" name="form-step-2">
 						<div class="fieldgroup">
+								<input type="text" name="token" id="token" />
+								<label for="token">Token</label>
+
+								<input type="text" name="token" id="token" />
+								<label for="token">Token</label>
+
+								<input type="text" name="token" id="token" />
+								<label for="token">Token</label>
+								
 								<input type="text" name="token" id="token" />
 								<label for="token">Token</label>
 						</div>
@@ -132,14 +142,16 @@
 				<p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
 						<br> Finally, please just write the words "I Agree" in the field below to consent to us using the previous data you entered to buy a new iPhone.</p>
 
-				<form action="" name="form-step-4">
+				<form action="/" method="post" name="form-step-4">
 						<div class="fieldgroup">
 								<input type="text" name="agreen" id="agreen" />
 								<label for="agreen">I agree</label>
 						</div>
 
 						<div class="buttons">
-								<button type="button" class="btn btn-alt js-reset">Reset</button>
+
+								<button type="button" class="btn btn-alt js-reset">Submit</button>
+
 						</div>
 				</form>
 
