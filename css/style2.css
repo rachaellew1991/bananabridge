@@ -23,6 +23,12 @@ a {
 a:hover {
   color: #179b77;
 }
+.header{
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
 .loginbody {
    background-image: url(http://livehdwallpaper.com/wp-content/uploads/2016/08/Cartoon-Monkey-Banana-Wallpapers-HD-images.png);
@@ -34,12 +40,13 @@ a:hover {
 }
 
 .loginform {
-  background: rgba(19, 35, 47, 0.9);
+  background: rgba(173, 218, 14, 0.52);
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  position:relative;
 }
 
 .tab-group {
@@ -57,7 +64,7 @@ a:hover {
   text-decoration: none;
   padding: 15px;
   background: rgba(160, 179, 176, 0.25);
-  color: #a0b3b0;
+  color: #fff;
   font-size: 20px;
   float: left;
   width: 50%;
@@ -79,7 +86,7 @@ a:hover {
   display: none;
 }
 
-h1 {
+h1 h2{
   text-align: center;
   color: #ffffff;
   font-weight: 300;
@@ -91,7 +98,7 @@ label {
   -webkit-transform: translateY(6px);
           transform: translateY(6px);
   left: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(6, 6, 6, 0.8);
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
@@ -126,7 +133,7 @@ input, textarea {
   background: none;
   background-image: none;
   border: 1px solid #a0b3b0;
-  color: #ffffff;
+  color: #000;
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;
@@ -201,7 +208,7 @@ body.freeze {
   pointer-events: none;
 }
 
-h1 {
+.header h1 h2{
   margin: 0;
   margin-bottom: 2rem;
   text-align: center;
