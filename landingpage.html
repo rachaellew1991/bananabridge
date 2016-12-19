@@ -15,6 +15,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+
+
 
 </head>
 
@@ -48,39 +51,20 @@
 		      </div>
 
 		      <div class="button login">
-		         <button><span>GO</span> <i class="fa fa-check"></i></button>
+		         <button><span>login</span> <i class="fa fa-check"></i></button>
+
 		      </div>
+          <div class="button signup">
+             <button><span>sign up</span> <i class="fa fa-check"></i></button>
+    
+          </div>
+
 
 		      <a href="" class="pass-forgot">Forgot your password?</a>
 
 		   </div>
-
-		   <div class="overbox">
-		      <div class="material-button alt-2"><span class="shape"></span></div>
-
-		      <div class="title">REGISTER</div>
-
-		      <div class="input">
-		         <label for="regname">Username</label>
-		         <input type="text" name="regname" id="regname">
-		         <span class="spin"></span>
-		      </div>
-
-		      <div class="input">
-		         <label for="regpass">Password</label>
-		         <input type="password" name="regpass" id="regpass">
-		         <span class="spin"></span>
-		      </div>
-
-		      <div class="input">
-		         <label for="reregpass">Repeat Password</label>
-		         <input type="password" name="reregpass" id="reregpass">
-		         <span class="spin"></span>
-		      </div>
-
-		      <div class="button">
-		         <button><span>NEXT</span></button>
-		      </div>
+</div>
+		   
 		      </div>
 		      </div>
        </div>
@@ -95,6 +79,92 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script>
+
+
+
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCWfSKQ3PMBYKKfZhENourhcMvJKIs9iiU",
+    authDomain: "bananabridge-de22d.firebaseapp.com",
+    databaseURL: "https://bananabridge-de22d.firebaseio.com",
+    storageBucket: "bananabridge-de22d.appspot.com",
+    messagingSenderId: "941481343749"
+  };
+  firebase.initializeApp(config);
+
+
+  function toggleSignIn() {
+    if (firebase.auth().currentUser) {
+      // [START signout]
+      firebase.auth().signOut();
+      // [END signout]
+    } else {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+      // Sign in with email and pass.
+      // [START authwithemail]
+      firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode === 'auth/wrong-password') {
+          alert('Wrong password.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+        document.getElementById('quickstart-sign-in').disabled = false;
+        // [END_EXCLUDE]
+      });
+      // [END authwithemail]
+    }
+    document.getElementById('quickstart-sign-in').disabled = true;
+  }
+
+    /**
+     * Handles the sign up button press.
+     */
+    function handleSignUp() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+      // Sign in with email and pass.
+      // [START createwithemail]
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/weak-password') {
+          alert('The password is too weak.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+        // [END_EXCLUDE]
+      });
+      // [END createwithemail]
+    }
+
+
 $(function() {
 
    $(".input input").focus(function() {
@@ -142,6 +212,44 @@ $(function() {
 
       }, 600);
       $("button", this).addClass('active');
+
+
+      var email = $('input#name').val();
+
+      //console.log(email);
+
+
+      var password = $('input#pass').val();
+
+      //console.log(password);
+
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+      // Sign in with email and pass.
+      // [START createwithemail]
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/weak-password') {
+          alert('The password is too weak.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+        // [END_EXCLUDE]
+      });
+
+
+
+
    })
 
    $(".alt-2").click(function() {
@@ -177,7 +285,7 @@ $(function() {
    })
 
    $(".material-button").click(function() {
-
+    
       if ($(this).hasClass('material-button')) {
          setTimeout(function() {
             $(".overbox").css({
