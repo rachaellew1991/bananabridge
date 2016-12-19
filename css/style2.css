@@ -21,6 +21,15 @@ a:hover {
   color: #179b77;
 }
 
+.loginbody {
+   background-image: url(http://livehdwallpaper.com/wp-content/uploads/2016/08/Cartoon-Monkey-Banana-Wallpapers-HD-images.png);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   min-height: 100vh;
+   font-family: 'Roboto', sans-serif;
+}
+
 .loginform {
   background: rgba(19, 35, 47, 0.9);
   padding: 40px;
