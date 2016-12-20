@@ -2,7 +2,12 @@
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+
 }
+body #halloween.back{
+  background-image:url("img/hallwback.jpg");
+}
+
 p {
   font-size: 15px;
 }
@@ -25,6 +30,11 @@ h5,
 h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
+}
+
+h1#topic-mediawrap{
+  font-size: 2.5em;
+  color:#fff;
 }
 
 .img-centered {
@@ -516,11 +526,8 @@ body {
 
 #howto.scrolltext{
   margin: 1px;
-  max-height: 300px;
-  
+  max-height: 500px;
   background-color: #fff;
-  
-  text-align: center;
   font-weight: bold;
   font-family: sans-serif;
   font-size: 3em;
@@ -528,6 +535,7 @@ body {
   overflow: scroll;
   -webkit-flex: 1;
   flex: 1;
+  padding:20px 20px 20px 20px;
 
 }
 #China.scrolltext{
@@ -624,7 +632,7 @@ ul {
 
 .comment-box {
   width: 85%;
-  margin-top: 50px;
+  margin-top: 30px;
   background: #fff;
   padding: 5px;
   display: flex;
