@@ -20,6 +20,7 @@
  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 
 </head>
 
@@ -171,8 +172,8 @@
     <div class="comment-box">
       <div class="comment-form">
         <div class="header">Add Your Comment</div>
-        <form action="#" onsubmit="event.preventDefault(); postComment()">
-          <div> 
+        <form action="#" onsubmit="event.preventDefault(); postCommentCelebrate()">
+          <div>
             <input type="text" id="name" placeholder="Name"/>
           </div>
           <div>
@@ -213,20 +214,20 @@
     <div class="comment-box">
       <div class="comment-form">
         <div class="header">Add Your Comment</div>
-        <form action="#" onsubmit="event.preventDefault(); postComment()">
-          <div> 
-            <input type="text" id="name" placeholder="Name"/>
+        <form action="#" onsubmit="event.preventDefault(); postCommentChina()">
+          <div>
+            <input type="text" id="name_china" placeholder="Name"/>
           </div>
             <div>
-              <textarea id="comment" rows="3" cols="30" placeholder="Comment"></textarea>
+              <textarea id="comment_china" rows="3" cols="30" placeholder="Comment"></textarea>
             </div>
           <button id="comment" type="submit">COMMENT</button>
         </form>  
       </div>
       
       <div>
-        
-        <div id="comments"></div>
+
+        <div id="comments_china"></div>
     </div>
       </div>
      
@@ -531,7 +532,23 @@ Modal.init();
 
 //comment firebase
 
-var ref = new Firebase("");
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCWfSKQ3PMBYKKfZhENourhcMvJKIs9iiU",
+    authDomain: "bananabridge-de22d.firebaseapp.com",
+    databaseURL: "https://bananabridge-de22d.firebaseio.com",
+    storageBucket: "bananabridge-de22d.appspot.com",
+    messagingSenderId: "941481343749"
+  };
+  firebase.initializeApp(config);
+
+
+//var defaultDatabase = firebase.database();
+//var ref = new Firebase("https://authsample-25898.firebaseio.com/");
+var ref = firebase.database().ref().child('Comments');
+
+
+
 
 // Thanks to https://gist.github.com/hurjas/2660489#file-timestamp-js-L26
 function timeStamp() {
@@ -550,7 +567,10 @@ function timeStamp() {
   return date.join("/") + ", " + time.join(":") + " " + suffix;
 }
 
-function postComment() {
+
+function postCommentCelebrate() {
+    console.log("postCommentCelebrate");
+
   var name = document.getElementById("name").value,
       comment = document.getElementById("comment").value,
       time = timeStamp();
@@ -567,13 +587,42 @@ function postComment() {
   document.getElementById("comment").value = '';
 }
 
+function postCommentChina() {
+    console.log("postCommentChina");
+
+  var name = document.getElementById("name_china").value,
+      comment = document.getElementById("comment_china").value,
+      time = timeStamp();
+
+  if (name && comment) {
+    ref.push({
+      name: name,
+      comment: comment,
+      time: time
+    });
+  }
+
+  document.getElementById("name").value = '';
+  document.getElementById("comment").value = '';
+}
+
+
 ref.on("child_added", function(snapshot) {
+    console.log("child_added");
+
   var comment = snapshot.val();
-  addComment(comment.name, comment.comment, comment.time);
+
+  if (comment != null) {
+      addComment(comment.name, comment.comment, comment.time, "comments");
+      addComment(comment.name, comment.comment, comment.time, "comments_china");
+  }
 });
 
-function addComment(name, comment, timeStamp) {
-  var comments = document.getElementById("comments");
+function addComment(name, comment, timeStamp, id) {
+    console.log("add comment");
+
+
+  var comments = document.getElementById(id);
   comments.innerHTML = "<hr><h4>" + name + " says<span>" + timeStamp + "</span></h4><p>" + comment + "</p>" + comments.innerHTML;
 }
 
