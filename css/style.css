@@ -516,7 +516,7 @@ body {
   width:900px;
   margin-top: 50px;
   padding-top: 25px;
-  background-color:  #666666;
+  background-color:  rgba(45, 44, 44, 0.86);
   position:relative;
   margin-left:auto;
   margin-right:auto;
@@ -732,7 +732,7 @@ button #comment:hover {
   display: block;
   width: 100px;
   height: 100px;
-  background: rgba(50,50,50,0.7);
+  background: rgba(243, 89, 8, 0.7);
   text-align: center;
   line-height: 100px;
   -webkit-border-radius: 50px;
@@ -743,7 +743,7 @@ button #comment:hover {
   background: rgba(230,150,20,0.7);
 }
 
-.ringMenu ul li:not(.main) {
+.ringMenu ul li:not(.mainmenu) {
   -webkit-transform: rotate(-180deg) scale(0);
   -moz-transform: rotate(-180deg) scale(0);
   -o-transform: rotate(-180deg) scale(0);
