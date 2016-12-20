@@ -1,11 +1,6 @@
 # Banana Bridge
- navigate guidance:
- 1. home page --> "find out more" button --> halloween learning page --> scroll down --> halloween jokes--> click the third panel see explination of third joke --> scroll down --> click pic "now it's time to have fun" --> learning page --> go through reading-->read a halloween story --->listening --> click to see a vocabulary song --->writing -->write something in tex area --> have fun ---> see halloween cooking recipes ---> click flashcard --> flashcard page ---> click card to see it flip.
- 
- 2.home page -->scroll down to "English and more" ---> click storyland picture --> storyland page --> see all the book sample -->click first book --> flip book page --> click <<< or >>> to next/previous page.
- 
 
-3.home page --> scroll down to grade level ---> click first grade ---> learning topic page -->click "basic" button --->learning page.
+ 
  
 
 # MSTU 5003 Design Document (Ruichen Liu)
@@ -19,7 +14,8 @@ You'll be adding to your design document as you work towards your midterm due on
 
 ## Topic
 *What is the subject at hand?*
-Helping Chinese immigrant kids age from 6-12 to learn English within a more cross-culture setting 
+Banana Bridge is a website aimed to help Chinese immigrant youth have a better
+cultural adjustment and improve their English writing skills. It is a website providing welcome environment where Chinese immigrant youth will join in as a community with people who has similar background and engage in America culture practice to improve writing skills and intercultural competence skills. 
 
 *Which broader field(s) does this site apply to?*
 langauge learning 
@@ -27,13 +23,7 @@ culture learning
 
 ## Problem
 *What is the problem you're trying to solve?*
-Language barrier:
-
-According to the U.S. Department of Education, the share of children aged five to seventeen living in families that speak a language other than English rose from 9 percent in 1979 to 21 percent in 2008. Of these children in non-English-language households, who represent 5 percent of all schoolaged youth in the United States, nearly one in four speaks English with difficulty. Research also shows that students who begin kindergarten with limited oral English proficiency fall behind native speakers in their reading ability, resulting in a substantial achievement gap by fifth grade.
-
-Culture difference:
-
-When immigrants leave their homeland and settle in another country, the new ways may be different from that of the old country. There are instances of bicultural conflicts that pose dilemmas for immigrant children. Teachers or parents may not even recognize the cultural basis of these dilemmas and may insist upon the child doing things according to their own upbringing and outlook, thus creating confusion and anxiety when the two authority figures do not agree. In this case, it is very essential for immigran children to over come the culture difference.
+immigrant youth are experiencing difficulty adjusting to a new context because they have difficulty to engage in new environment: they are afraid of interacting with others because they are different from immigrant youth themselves. They couldn’t understand about what other people are talking about both linguistically and informatively; they couldn’t get involved into a conversation because they don’t know what to say.
 
 ## Target Audience
 *Who is your target audience? Describe in detail*
@@ -43,7 +33,18 @@ Race: Chinese
 langauge: Chinese: intermediate: can deal with simple key tasks  
 		  English: Elementary proficiency: can deal with limited day-to-day activity 
 
-These children moved to America with their parents from mother country and at least one of their parents are not proficient with English. These children are currently in primary and secondery schools which most of them are domained by American culture in English speaking environement. Immigrant chlidren in this situation need a better cultural adjusment and English improvement. 
+These children moved to America with their parents from mother country and at least one of their parents are not proficient with English. These children are currently in primary and secondery schools which most of them are domained by American culture in English speaking environement. Immigrant chlidren in this situation need a better cultural adjusment and English improvement. To sum up, following support are missing here to help immigrant youth adjustment:
+* A welcoming environment
+Being an international student myself, I deeply understand about the frightened of being surround with people who are not look like you, speak the different language of you, dress different like you do. For immigrant youth, it is the same scared feeling that stop them from interacting in new environment. Thus, the first step is, they need a welcoming environment where people have similar background, speak seam language, same race have more common to share. They need a Chinese immigrant community to make friends that they are not afraid to talk to; to talk in same language that they familiar with; to have some social bonding that they will not feel lonely. “Making friends are essential!” said from a 25-year-old Chinese young man who came into American with his
+6
+parents at the age of ten. When he was in junior high school, he never had friends until he met other Chinese immigrant students at ESL class, that is when he finally started feel like home.
+* Linguistic support
+Besides of ELS course during school, additional language learning support is necessary for immigrant youth (McCarthy, K., 1998). According to the XX, speaking and writing skills are two challenges that most of immigrant youth might tend to have low achievement. Speaking and writing problems are not only reveals in academic performance but also on the social level (Goodwin, A. L.,2002). In class, English that they are learning is academic English lacking of the interaction with peers. After class, most of immigrant students have awareness of social English only when they walk through the campus. They could barely understand the meaning not to mention to participate in the conversation. Even if, they get chance to involve into a conversation, immigrant youth are often too frightened to react because of the issue of race, culture different. They are lacking of ability to demonstrate knowledge of social features such as the cultural features like art, literature, music, film, popular culture, tradition, and customs(Berry, J. W., 1997).
+
+* Cultural knowledge support
+Language and culture are fundamentally related(Garrett, J. E., & Holcomb, S., 2005; Berry, J. W., 1997). Language is not only a symbol code to communication, it is a daily live tool that people use to articulate, create and interpret meanings and to establish and maintain social and interpersonal relationships. Immigrant youth are lack of these kind of creative meaning, interpreting within a cultural context. For language learning process, cultural context is not a single culture as both the target language and culture, what’s more, the learner’s own language and culture are simultaneously present and can be simultaneously engaged (Garrett, J. E., & Holcomb, S., 2005). Also culture context is not only the artifacts that learners need to know but of learners coming to understand their own identity, existence, values, attitudes and beliefs (Chen, S. X., Benet- Martínez, V., & Harris Bond, M., 2008). It is a very personal experience. Intercultural approach is to redirect learner from their own culture-based assumptions to develop and engage with a new culture. Learners develop their knowledge and awareness and find ways of acting according to their new learning.  
+
+
 
 ### User Stories
 **Outline 2-3 user stories. Describe how they find out, engage and come back to your site. Provide rationale.**
@@ -73,19 +74,34 @@ This section should describe objectives, goals and metrics.
 
 ### Site Objectives:
 *What do we want to get out of the site?*
-English skills improvement including Lisenning, reading, speaking and Writing.
-Learning more about American culture, such as holidays, foods, history, etc.
-Attempt to merge existing chinese culture experience with more American cultural experience. 
+* Firstgoal:studentscancommunicateskillfullyandeffectivelyinEnglishabout cultural topics, this goal focuses on both linguistic and analytical skills. It recognizes the importance of developing learners’ ability to listen to, read, and view texts in order to extract meaning, and to articulate ideas interpersonally and in presentational writing and speaking.
+* Second goal: students can demonstrate foundational cultural and linguistic knowledge of using English. This learning goal reflects practices to link between developing learners’ language skills and cultural knowledge. It also supports an integrative and contextualized notion of culture, in which learners are encouraged to see how the holiday, food, music and religion may inform cultural products, practices, and perspectives.
+
 
 ### Success Metrics
 *Outline how you will check that the goals for your site have been met*
 
-English evaluation will based on game oriented tests for each sections, wirting skills can also be evaluated by their story books. How many badges they earn.
+Evaluation plan of Banana Bridge includes two spheres. This first is evaluation plan for the learning environment which is more focus on user experience research and design feedback. Following approaches will be implement to assess user experience and learning experience.
 
-Culture learning evaluation based click rate, story books that they wrote, food land. Go through their personal profile to find out what they have acchieved. 
+* User experience research evaluation
+For each learning section, click rate research, A/B testing would be conducted to see how learners react to the content. Click rate data can be collected from back end of website to analysis the design of each content pedagogy. For example, how many view of each page of “Halloween” section can be collect to see the rate of each interactivity. Also, Learning experience survey would be another strategy to evaluate learning experience. After learn finished one section, they will gain a short survey to see how do they like the design and flow of this learning experience. Finally, interview the focus group who are a demographically diverse group of immigrant youth, parents and educators that assembled to participate in a guided discussion about a particular product before it is launched, or to provide ongoing feedback on a the learning design and user experience design.
 
-User experience evaluation: click through data, survey, Questions page.
+### Evaluation of the learners 
+* Pre assessment
+It is very necessary and essential to know about immigrant youth their prior knowledge and cultural background (Goodwin, A. L., 2002). When one new user signs up in Banana Bridge, his/her account need to be activate by their parents through email. When parents activate this new account, they are required to help their children fill out the survey about their background information. There will be four sections of this survey and through this survey, we will get to know about personal info including: age gender, ethnicity, and racial group; user’s learning preference, interests and personality. Also their language capacity and motivation. After taking the survey, one user’s personal profile would be generated to served as a sense of identity. Other users could know him/her better.
+Based on this background survey, instructional designers would have a better understanding of their learners and to determine more customized content and design to meet their needs. In addition, this background information could be very helpful for school teachers to know about their immigrant students in class. Teachers can go to Banana Bridge to search their students name, check out their profiles to learn about their cultural background, learning preference and current status on the website.
 
+a. Direct Evidence: instant reflection
+Among all the cultural topics of Banana Bridge, every section of it’s learning page will have little task to allow learners to provide immediate reflections. For example, if a user is interested about Thanksgiving. He selects to the “Thanksgiving” learning page. He goes to “how people celebrate Thanksgiving” and follows the instruction to write down something about what do you like or dislike about thanksgiving and why. He will be guided to write in Chinese first and then write in English. Then he clicks next to see similar holiday in China-- Mid-Autumn Festival. These where to recall their existing knowledge about this traditional Chinese Festival to compare with thanksgiving day. Here will guide him to write some best memories of celebrating Mid-Autumn Festival. Jumping to the next section, he will write few sentences about how would he like to celebrate thanksgiving. Also, during this little writing tasks, he can see others written and commend on. These instant reflections would serve to evaluate how learners understand about Thanksgiving day; did learner understand and engage in the informative content including video, picture, audio, text; how learner demonstrated foundational cultural and linguistic knowledge of using English; how learner demonstrated the awareness of the interplay of personal identity and culture. Difference topic will have different interactive tasks to reveal their reflections.
+
+b. Direct Evidence: E-profiles
+Every sign up users (immigrant youth) will have their own personal profiles in their home page. When user finished a task or comment on something, it would automatically update in their personal profile. A Facebook API could achieve this function. Personal profile represents their identity and their interactivities. It will provide a whole dynamic picture of how learner’s personal intercultural engagement help him/her redirect from their own culture-based assumptions to develop and engage with a new culture. For example, one’s personal profile will shows what topics he/she have learned and what he/she had wrote according to these topics. What collaborative story he/she involved in and which stories are on progress, which are published. Also, it will reveal what videos, pictures and other open resources he/she has shared based on different topic and how he/she commend on others’ writing. Based on their personal profile, it would help to evaluate their ability to engage in effective interpersonal communication.
+
+c. DirectEvidence:collaborativestory
+Different cultural topic may have different interactivities and different writing task, but every topic would have at least one collaborative story writing section. This is where learners will have fun with all social interactions to share and re-construct their existing knowledge. For example, for the topic “Halloween”, leaners choose one collaborative story to continue- “Monkey king (a very famous Chinese animation character) is having a Halloween party...” he/she will read others plot about how monkey king celebrate Halloween and he/she jumps in to continue the story. The way learner jumped in, how he/she continues the story and how he/she interact with others will reflect the linguistic ability and analyze ability of learners. It will help to evaluate how learner interpret an event, cultural product, or story from the perspective of a worldview outside their own.
+
+d. Parents & Teacher Feedback
+Parents and teachers are two essential groups deeply involved in immigrant youth’s daily life (Berry, J. W., 1997). The feedback from their parents and teachers was very helpful in further fleshing out the instructional plan. After every publishing story They would provide different perspectives, insightful feedback and brought up certain issues that our project might missing out. To analyze their feedback would be a great opportunity to assess immigrant youth’s status more personally and will provide more detail information about how learners.
 
 
 
