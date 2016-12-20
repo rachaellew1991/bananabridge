@@ -633,7 +633,7 @@ ul {
 .comment-box {
   width: 85%;
   margin-top: 30px;
-  background: #fff;
+  background: #e6b800;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -648,6 +648,10 @@ ul {
   padding: 5px 10px;
 }
 
+.comment-form{
+
+  background-color:#e6b800;
+}
 .header {
   margin: 15px 20px;
   font-size: 27px;
